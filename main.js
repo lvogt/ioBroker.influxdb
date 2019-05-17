@@ -785,7 +785,7 @@ function storeBufferedSeries(cb) {
         clearInterval(seriesBufferChecker);
     }
 
-    adapter.log.info('Store ' + seriesBufferCounter + ' buffered influxDB history points');
+    adapter.log.debug('Store ' + seriesBufferCounter + ' buffered influxDB history points');
 
     if (seriesBufferCounter > 15000) {
         // if we have too many datapoints in buffer; we better writer them per id
